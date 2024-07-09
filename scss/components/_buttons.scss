@@ -11,6 +11,10 @@
     background-color: $white;
     font-weight: 700;
     transition: .3s;
+    display: block;
+    margin: 0;
+    width: fit-content;
+    color: $black;
      i {
         position: absolute;
         transform: translateY(-50%);
