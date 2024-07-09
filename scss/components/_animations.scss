@@ -1,0 +1,14 @@
+@use '../components/mixins' as *;
+
+@mixin pulse-border { 
+    @include KeyFrame (pulse-border, 1.5s, linear, infinite) {
+        0% {
+            transform: scale(1);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(1.5);
+            opacity: 0;
+        }
+    }
+}
