@@ -1,0 +1,44 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+@use '../components/animations' as *;
+
+.intro-section { 
+    @include gradient;
+    padding-top: 10rem;
+    .content-part {
+        .contact {
+            @include media-breakpoint-between(sm, lg) {
+                display: block;
+            }
+        }
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 2rem;
+        }
+    }
+    .vid-box {
+        .play {
+            @include abs-center;    
+            i {
+                color: $secondary;
+                font-size: 6rem;
+                transition: .3s;
+            }
+        }
+    }
+}
+.border-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6rem;
+    height: 6rem;
+    border: .55rem solid $white;
+    border-radius: 50%;
+    @include pulse-border;
+    &--border-1 {
+        @include prefixer(animation-delay, 1s, webkit moz ms);
+    }
+    &--border-2 {
+        @include prefixer(animation-delay, 1.5s, webkit moz ms);
+    }
+}
