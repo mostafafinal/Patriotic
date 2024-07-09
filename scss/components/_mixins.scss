@@ -4,3 +4,25 @@
 @mixin gradient {
     background: linear-gradient(to right, rgba($primary, .95), rgba($secondary, .95));
 }
+
+@mixin prefixer($property, $value, $prefixes: ()) {
+    @each $prefix in $prefixes {
+        #{'-' + $prefix + '-' + $property}: $value
+    }
+    #{$property}: $value;
+}
+
+@mixin abs-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include prefixer(transform, translate(-50%, -50%), webkit moz ms );
+}
+
+
+@mixin KeyFrame($anim-name, $delay, $dir, $function) {
+    @include prefixer(animation, #{$anim-name} #{$delay} #{$dir} #{$function}, webkit moz ms);
+    @keyframes #{$anim-name} {
+        @content;
+    }
+}
