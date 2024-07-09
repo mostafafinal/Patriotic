@@ -1,1 +1,16 @@
-@use 'custom';
+// Import Components 
+@use 'components/animations';
+@use 'components/buttons';
+@use 'components/mixins';
+@use 'components/typography';
+
+// Import Setions
+@use 'layouts/navbar';
+@use 'layouts/intro-section';
+@use 'layouts/companies';
+@use 'layouts/services';
+@use 'layouts/testimonials';
+@use 'layouts/faq';
+@use 'layouts/portfolio';
+@use 'layouts/get-started';
+@use 'layouts/footer';

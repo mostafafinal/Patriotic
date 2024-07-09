@@ -1,0 +1,20 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.nav-bg {
+    @include gradient;
+        li {
+            padding: 0 0.6rem;
+            font-weight: 600;
+            a {
+                color: $disabled !important;
+                &.active,
+                &:hover {
+                    color: $white !important;
+                }
+                &.active {
+                    cursor: default;
+                }
+            }
+        }
+}
