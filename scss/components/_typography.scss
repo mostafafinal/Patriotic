@@ -17,3 +17,16 @@
         margin-top: 1.2rem;
     }
 }
+
+.sections-head {
+    font-family: "Poppins", sans-serif;
+    &--title {
+        font: {
+            size: 3.65rem;
+            weight: 700;
+        }
+    }
+    &--description { 
+        margin: 0 0 1rem;
+    }
+}
