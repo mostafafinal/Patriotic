@@ -1,0 +1,16 @@
+@use '../custom' as *;
+
+.companies {
+    padding: 0 0 5rem 0;
+    .sections-head {
+        font-size: 1.25rem;
+    }
+    .co-img {
+        margin-bottom: 2rem;
+        height: 3rem;
+        padding: .5rem;
+        img {
+            height: 100%;
+        }
+    }
+}
