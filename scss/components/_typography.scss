@@ -1,4 +1,5 @@
 @use '../custom' as *;
+@use './mixins' as *;
 
 .content {
     margin-bottom: 1rem;
@@ -28,5 +29,21 @@
     }
     &--description { 
         margin: 0 0 1rem;
+    }
+}
+
+.display-3 {
+
+    &--title {
+        text-transform: capitalize;
+        font: {
+            family: "Poppins", sans-serif;
+            size: 1.8rem;
+            weight: 600;
+        }
+        background-image: linear-gradient(to right, rgba($primary, .95), rgba($secondary, .95));
+        @include prefixer(background-clip, text, webkit moz ms);
+        @include prefixer(text-fill-color, transparent, webkit moz ms);
+
     }
 }
