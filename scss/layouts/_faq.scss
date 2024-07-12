@@ -1,0 +1,7 @@
+@use '../custom' as *;
+
+.faq {
+    button[aria-expanded="true"] {
+        color: $primary;
+    }
+}
