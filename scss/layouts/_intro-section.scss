@@ -18,7 +18,7 @@
     .vid-box {
         .play {
             @include abs-center;    
-            i {
+            svg {
                 color: $secondary;
                 font-size: 6rem;
                 transition: .3s;
