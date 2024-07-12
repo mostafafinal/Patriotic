@@ -6,11 +6,16 @@
         font-size: 1.25rem;
     }
     .co-img {
-        margin-bottom: 2rem;
-        height: 3rem;
         padding: .5rem;
+        height: 3rem;
+        margin-bottom: 2rem;
+        cursor: pointer;
         img {
             height: 100%;
+            transition: .3s;
+        }
+        &:hover img { 
+            filter: grayscale(120);
         }
     }
 }
