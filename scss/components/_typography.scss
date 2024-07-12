@@ -33,7 +33,6 @@
 }
 
 .display-3 {
-
     &--title {
         text-transform: capitalize;
         font: {
@@ -44,6 +43,16 @@
         background-image: linear-gradient(to right, rgba($primary, .95), rgba($secondary, .95));
         @include prefixer(background-clip, text, webkit moz ms);
         @include prefixer(text-fill-color, transparent, webkit moz ms);
-
     }
+}
+
+.display-4 {
+    font: {
+        size: calc(1.475rem + 2.7vw);
+        weight: 700;
+    }
+}
+
+.gradient {
+    background: linear-gradient(to right, rgba($primary, .95), rgba($secondary, .95));
 }

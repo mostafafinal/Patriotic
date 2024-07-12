@@ -1,0 +1,18 @@
+@use '../custom' as *;
+
+.get-started {
+    padding: 4rem 0;
+    background-color: $gray-200;
+    .cta-info {
+        padding: 3rem;
+        margin: 1rem 0;
+        color: $white;
+    }
+    form {
+        padding: 3rem;
+        input,
+        textarea {
+            padding: .5rem 1rem;
+        }
+    }
+}
