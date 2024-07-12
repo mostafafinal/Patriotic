@@ -18,3 +18,23 @@
             }
         }
 }
+.navbar-toggler {
+    border: .15rem solid $primary;
+    transition: .3s;
+    &:focus {
+        box-shadow: none;
+    }
+    .toggler-icon {
+        transition: .3s;
+        color: $white;
+        width: 1.7rem;
+        height: 1.7rem;
+    }
+    &:hover {
+        border-color: $white;
+        & .toggler-icon {
+            color: $primary;
+        }
+    }
+
+}
