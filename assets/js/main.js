@@ -18,3 +18,27 @@ backBtn.onclick = () => {
     behavior: "smooth",
   });
 };
+
+// // Gallery Filter
+const galleryBtns = document.querySelectorAll(".portfolio-btns .btn");
+galleryBtns.forEach((btn) => {
+  btn.addEventListener("click", (event) => {
+    activeState(event);
+    document.querySelectorAll(".row .box").forEach((section) => {
+      section.style.display = "none";
+    });
+    document
+      .querySelectorAll(`.row .box.${event.target.dataset.section}`)
+      .forEach((e) => {
+        e.style.setProperty("display", "block", "important");
+      });
+  });
+});
+
+// Active Buttons Function
+function activeState(event) {
+  event.target.parentElement.querySelectorAll(".active").forEach((active) => {
+    active.classList.remove("active");
+  });
+  event.target.classList.add("active");
+}
