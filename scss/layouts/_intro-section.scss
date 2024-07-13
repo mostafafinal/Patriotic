@@ -1,6 +1,6 @@
 @use '../custom' as *;
-@use '../components/mixins' as *;
-@use '../components/animations' as *;
+@use '../helpers/mixins' as *;
+@use '../helpers/animations' as *;
 
 .intro-section { 
     @include gradient;

@@ -1,5 +1,5 @@
 @use '../custom' as *;
-@use '../components/mixins' as *;
+@use '../helpers/mixins' as *;
 
 .nav-bg {
     @include gradient;

@@ -1,4 +1,4 @@
-@use '../components/mixins' as *;
+@use '../helpers/mixins' as *;
 
 @mixin pulse-border { 
     @include KeyFrame (pulse-border, 1.5s, linear, infinite) {
