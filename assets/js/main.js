@@ -47,6 +47,7 @@ function activeState(event) {
 let navLinks = document.querySelectorAll(".nav-item .nav-link");
 navLinks.forEach((link) => {
   link.addEventListener("click", (e) => {
+    document.querySelector(".navbar-collapse").classList.toggle("show");
     navLinks.forEach((e) => {
       e.classList.remove("active");
     });
@@ -56,3 +57,12 @@ navLinks.forEach((link) => {
     });
   });
 });
+
+// Handling Toggoler Menu
+document.onclick = (e) => {
+  if (document.querySelector(".show")) {
+    if (e.target !== document.querySelector(".nav-link")) {
+      document.querySelector(".navbar-collapse").classList.remove("show");
+    }
+  }
+};
