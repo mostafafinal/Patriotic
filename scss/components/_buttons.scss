@@ -34,8 +34,8 @@
     &:hover {
         color: $white;
         @include gradient;
-        & i {
-            background-color: $black;
+        & svg {
+            background-color: rgba($black, 0.6);
         }
     }
 }
