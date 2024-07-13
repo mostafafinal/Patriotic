@@ -42,3 +42,17 @@ function activeState(event) {
   });
   event.target.classList.add("active");
 }
+
+// Navbar scrolling
+let navLinks = document.querySelectorAll(".nav-item .nav-link");
+navLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    navLinks.forEach((e) => {
+      e.classList.remove("active");
+    });
+    e.target.classList.add("active");
+    document.querySelector(e.target.dataset.section).scrollIntoView({
+      behavior: "smooth",
+    });
+  });
+});
